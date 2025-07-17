@@ -9,9 +9,12 @@ list.addEventListener('click', (e) => {
 
   if (listItem) {
     const link = listItem.querySelector('a');
-    const newImageUrl = link.href;
-    const bigImage = document.getElementById('largeImg');
 
-    bigImage.setAttribute('src', newImageUrl);
+    if (link) {
+      const newImageUrl = link.href;
+      const bigImage = document.getElementById('largeImg');
+
+      bigImage.setAttribute('src', newImageUrl);
+    }
   }
 });
